@@ -9,20 +9,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($bmi < 17) {
             $status = "Kurus. Kekurangan berat badan berat";
-        } elseif ($bmi >= 17.0 && $bmi < 18.4) {
+        } elseif ($bmi >= 17.0 && $bmi < 18.5) {
             $status = "Kurus. Kekurangan berat badan ringan";
         } elseif ($bmi >= 18.5 && $bmi < 25.0) {
             $status = "Normal";
-        } elseif ($bmi >= 25.1 && $bmi < 27.0) {
+        } elseif ($bmi >= 25 && $bmi < 27.0) {
             $status = "Gemuk. Kelebihan berat badan ringan";
-        } elseif ($bmi >= 27.1) {
+        } elseif ($bmi >= 27.0) {
             $status = "Gemuk. Kelebihan berat badan berat";
         } else {
             $status = "Obesitas";
         }
     } else {
-        $bmi = "Nilai tidak valid";
-        $status = "Masukkan nilai yang valid";
+        $bmi = "Nilai tidak valid 😹";
+        $status = "Masukkan nilai yang valid 😑";
     }
 }
 ?>
@@ -38,9 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h2>BMI Kalkulator</h2>
     <form method="post">
         <label for="bb">Berat Badan (kg):</label>
-        <input type="number" step="0.1" name="bb" required><br>
+        <input type="number" step="0.00001" name="bb" required><br>
         <label for="tb">Tinggi Badan (cm):</label>
-        <input type="number" step="0.1" name="tb" required><br>
+        <input type="number" step="0.00001" name="tb" required><br>
         <button type="submit">Coba Hitung</button>
     </form>
     
